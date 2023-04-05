@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Compras</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Lista de Compras</h1>
+      </header>
+
+      <section class="card">
+        <fieldset>
+          <legend>Escolha do produto</legend>
+          <form>
+            <label>
+              Produto:
+              <select id="produto_selecionado">
+                <option value="" disabled selected>Selecione um produto</option>
+                <option value="arroz">Arroz - R$20,00</option>
+              </select>
+            </label>
+
+            <label>
+              Quantidade:
+              <input type="number" id="quantidade_produto" />
+            </label>
+
+            <button id="botaoAdicionar" onclick="adicionar()" type="button">
+              Adicionar<img src="img/add.png.crdownload" width="25" height="25"
+            </button>
+            <button
+              id="botaoCancelar"
+              onclick="limparMinhasCompras()"
+              type="button"
+            >
+              Limpar<img src="img/trash.png.crdownload" width="25" height="25"
+            </button>
+          </form>
+        </fieldset>
+      </section>
+
+      <section class="card">
+        <fieldset>
+          <legend>Minhas compras</legend>
+          <table border="1">
+            <thead>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Preço</th>
+              <th>Total</th>
+              <th>Ações</th>
+            </thead>
+            <tbody id="tabela_compras"></tbody>
+          </table>
+        </fieldset>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
